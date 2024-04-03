@@ -1,4 +1,4 @@
 - tema5002
 - i kinda know python
 - i have keyboard
-- aroace
+- gmt+3, belarus, aroace
