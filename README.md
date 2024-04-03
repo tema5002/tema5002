@@ -1,4 +1,4 @@
 - tema5002
 - i kinda know python
-- i like making discord bots even if they are useless
+- i have keyboard
 - aroace
