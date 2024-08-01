@@ -1,4 +1,3 @@
 - tema5002
-- i kinda know python
-- i have keyboard
-- gmt+3, belarus, aroace
+- i kinda know python and c#
+- i have a keyboard
