@@ -85,11 +85,6 @@ public:
 /*
 old line() code because i dont want to lose it:
 
-if (SCALE == 1) {
-    SDL_SetRenderDrawColor(renderer, c.r, c.g, c.b, c.a);
-    SDL_RenderDrawLine(renderer, x1, y1, x2, y2);
-    return;
-}
 int dx = x2 - x1;
 int dy = y2 - y1;
 float length = sqrt(dx * dx + dy * dy);
