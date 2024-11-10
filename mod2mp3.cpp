@@ -43,7 +43,7 @@ int main(int argc, char* argv[]) {
         while (true) {
             std::size_t count = mod.read(samplerate, buffersize, pcm_buffer_left, pcm_buffer_right);
             if (count == 0) break;
-            for (size_t i = 0; i < count; ++i) {
+            for (size_t i = 0; i < count; i++) {
                 interleaved_buffer[2 * i] = pcm_buffer_left[i];
                 interleaved_buffer[2 * i + 1] = pcm_buffer_right[i];
             }
