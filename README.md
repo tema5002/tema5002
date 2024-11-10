@@ -1,3 +1,5 @@
 - tema5002
-- i kinda know python and c#
-- i have a keyboard
+- i absolutely suck at explaining who i am
+- i know python, c# and c++
+- i have a keyboard (probably)
+- you may find some random and probably useful code on this repo (tema5002/tema5002)
