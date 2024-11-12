@@ -3,6 +3,9 @@
  *
  * compiles with:
  * gcc audiosort.c -o audiosort -O3 -Wall -Wextra -Werror -Wno-unused-result -lm
+ *
+ * usage:
+ * ./audiosort <input_file> <output_file>
  */
 
 #include <stddef.h>
