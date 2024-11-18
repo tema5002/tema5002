@@ -2,4 +2,5 @@
 - i absolutely suck at explaining who i am
 - i know python, c# and c++
 - i have a keyboard (probably)
+- i do stupid stuff because i get bored sometimes
 - you may find some random and probably useful code on this repo (tema5002/tema5002)
