@@ -1,5 +1,5 @@
 hello there i am tema5002\
-i absolutely suck at explaining who i am uhhhh\
+i absolutely suck at explaining who i am uhhhh
 - c# is love c# is life
 - i also know c++ and python
 - i have a keyboard (probably)
