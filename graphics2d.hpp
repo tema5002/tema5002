@@ -80,6 +80,11 @@ public:
         SDL_RenderPresent(renderer);
         SDL_Delay(ms);
     }
+
+    void clear(const RGBColor c) const {
+        SDL_SetRenderDrawColor(renderer, c.r, c.g, c.b, 255);
+        SDL_RenderClear(renderer);
+    }
 };
 
 /*
