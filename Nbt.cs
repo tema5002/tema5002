@@ -1,4 +1,4 @@
-﻿// an implementation of nbt format reader write
+﻿// an implementation of nbt format reader/writer
 // NBTFile only supports .ToBytes() and .FromBytes() methods because i am lazy to do others
 // not sure does it actually work i tested it last time like 4 months ago
 
