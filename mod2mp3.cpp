@@ -11,9 +11,10 @@
 #include <bits/stdc++.h>
 #include <libopenmpt/libopenmpt.hpp>
 
+#define BUFFER_SIZE 480
+#define SAMPLE_RATE 48000
+
 int main(int argc, char* argv[]) {
-    constexpr size_t buffersize = 480;
-    constexpr int32_t samplerate = 48000;
     if (argc < 3) {
         std::cout << "nouuuuuuuuu\n";
         return 1;
@@ -21,7 +22,7 @@ int main(int argc, char* argv[]) {
     std::ifstream file(argv[1], std::ios::binary);
     openmpt::module mod(file);
 
-    std::string command = "ffmpeg -f s16le -ar " + std::to_string(samplerate) + " -ac 2 -i pipe: ";
+    std::string command = "ffmpeg -f s16le -ar " + std::to_string(SAMPLE_RATE) + " -ac 2 -i pipe: ";
     for (char* c = argv[2]; *c; c++) {
         if (*c == ' ') command += '\\';
         command += *c;
@@ -37,18 +38,17 @@ int main(int argc, char* argv[]) {
     mod.set_render_param(openmpt::module::render_param::RENDER_VOLUMERAMPING_STRENGTH, 0); // no volume ramping
 
     try {
-        int16_t pcm_buffer_left[buffersize];
-        int16_t pcm_buffer_right[buffersize];
-        int16_t interleaved_buffer[buffersize * 2];
+        int16_t interleaved_buffer[BUFFER_SIZE * 2];
         while (true) {
-            std::size_t count = mod.read(samplerate, buffersize, pcm_buffer_left, pcm_buffer_right);
+            int16_t pcm_buffer_right[BUFFER_SIZE];
+            int16_t pcm_buffer_left[BUFFER_SIZE];
+            std::size_t count = mod.read(SAMPLE_RATE, BUFFER_SIZE, pcm_buffer_left, pcm_buffer_right);
             if (count == 0) break;
             for (size_t i = 0; i < count; i++) {
                 interleaved_buffer[2 * i] = pcm_buffer_left[i];
                 interleaved_buffer[2 * i + 1] = pcm_buffer_right[i];
             }
             fwrite(interleaved_buffer, sizeof(int16_t), count * 2, pipe);
-            fflush(stdout);
         }
         pclose(pipe);
     }
