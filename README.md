@@ -7,4 +7,5 @@ i absolutely suck at explaining who i am uhhhh
 # features repos
 - [antigrav-cs](https://github.com/antigrav-technologies/antigrav-cs): serializing .NET library with very stupid name
 - [TheLang](https://github.com/antigrav-technologies/TheLang): esolang made in one hour i think
+- [XIGrabber](https://github.com/tema5002/xigrabber): cli utility to extract xi from xm
 - [literally what you are seeing right now](https://github.com/tema5002/tema5002): random and probably useful code
